@@ -27,13 +27,12 @@ if (isset($_POST['ajoute'])) {
     //si aucun des cases dans le form sont vides: 
     if (!empty($code) && !empty($libellé) && !empty($niveau) && !empty($comite)) {
         $resultatc = ajouter_competition($connexion, $libellé, $code, $niveau);
-        $resultatgere = ajouter_gere($connexion, $code, $comite);
         //vérification de la requête
         if ($resultatc == true && $resultatgere == true)
             echo "Compétition ajouté avec succès";
         else
             echo "Erreur lors de l'ajoute de compétition";
-        
+        $resultatgere = ajouter_gere($connexion, $code, $comite);
     } else
         echo "Veuillez remplir toutes les cases";
 

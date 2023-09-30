@@ -19,7 +19,7 @@ $niveauC = get_nivcompet($connexion);
 $adherant1 = get_adherant($connexion);
 $adherant2 = get_adherant($connexion);
 $editionC = liste_edition($connexion);
-$idGD = get_idgd($connexion);
+$idgd = get_idgd($connexion);
 
 //Si l'utilisateur choisi de modifier la compétition: 
 if (isset($_POST['Modifiercompet'])) {
